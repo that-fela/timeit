@@ -10,5 +10,5 @@ Example:
 
 ## Installation:
 1. Clone or download
-2. Compile using a C++ compiler (`g++ "src\\main.cpp" -o "build\\timeit"`)
+2. Compile using a C++ compiler (`g++ "src\\main.cpp" -o "build\\timeit"`) or use existing .exe
 3. Add build to Path. View advanced system settings -> Environmental Variables -> Path
