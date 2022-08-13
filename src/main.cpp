@@ -71,6 +71,8 @@ std::string make_command(int argc, char *args[]) {
         }
 
         return cmd;
+    } else if (argc == 2) {
+        return cmd += args[1]; 
     }
 
     get_help();
