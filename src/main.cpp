@@ -115,7 +115,8 @@ void in_microseconds(std::string cmd) {
 
 void get_help() {
     printf("\nUSAGE:\n");
-    printf("timeit {arguments} {program to run with args}\n");
+    printf("timeit {arguments} {program to run with args}\n\n");
+    printf("ARGUMENTS:\n");
     printf("-help\tshows this menu\n");
     printf("-m\treturns time in milliseconds (default)\n");
     printf("-u\treturns time in microseconds\n");
