@@ -11,8 +11,8 @@
 
 using namespace std::chrono;
 
-void get_help();
 std::string make_command(int argc, char *argv[]);
+void get_help();
 void in_milliseconds(std::string cmd);
 void in_microseconds(std::string cmd);
 
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
         }
 
     } else {
-        printf("\n\nNO SUPPORT FOR UNIX YET\n");
+        printf("\n\nNO SUPPORT FOR GNU/Linux YET\n");
     }
 
     return 1;
@@ -81,9 +81,9 @@ std::string make_command(int argc, char *args[]) {
 
 uint64_t get_time(TIME_UNIT time_type) {
     if (time_type == TIME_UNIT::MILLISECONDS) {
-        return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
+        return time_point_cast<milliseconds>(high_resolution_clock::now()).time_since_epoch().count();
     } else if (time_type == TIME_UNIT::MICROSECONDS) {
-        return duration_cast<microseconds>(system_clock::now().time_since_epoch()).count();
+        return time_point_cast<microseconds>(high_resolution_clock::now()).time_since_epoch().count();
     }
 
     return 0;
