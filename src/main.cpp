@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
             for (int i = 1; i < argc; i++)
             {   
-                if ((std::string)argv[i] == "-help") {
+                if ((std::string)argv[i] == "--help") {
                     get_help();
 
                 } else if ((std::string)argv[i] == "-m") {
@@ -119,7 +119,7 @@ void get_help() {
     printf("\nUSAGE:\n");
     printf("timeit {arguments} {program to run with args}\n\n");
     printf("ARGUMENTS:\n");
-    printf("-help\tshows this menu\n");
+    printf("--help\tshows this menu\n");
     printf("-m\treturns time in milliseconds (default)\n");
     printf("-u\treturns time in microseconds\n");
     printf("\nNOTE: -m and -u are mutually exclusive\n");
